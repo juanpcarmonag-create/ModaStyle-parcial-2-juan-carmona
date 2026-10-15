@@ -1,11 +1,14 @@
 package uniquindio.edu.co;
 
+import java.util.List;
+
 public class Prendas {
     private int codigoPrenda;
     private String nombre;
     private String marca;
     private double precioUnitario;
     private CategoriaPrendas categoriaPrendas;
+    private List<Prendas> listaPrendas;
 
     public Prendas(int codigoPrenda, String nombre, String marca, double precioUnitario, CategoriaPrendas categoriaPrendas) {
         this.codigoPrenda = codigoPrenda;
@@ -53,5 +56,14 @@ public class Prendas {
 
     public void setCategoriaPrendas(CategoriaPrendas categoriaPrendas) {
         this.categoriaPrendas = categoriaPrendas;
+    }
+
+    @Override
+    public String toString() {
+        return "codigoPrenda=" + codigoPrenda +
+                ", nombre='" + nombre + '\'' +
+                ", marca='" + marca + '\'' +
+                ", precioUnitario=" + precioUnitario +
+                ", categoriaPrendas=" + categoriaPrendas;
     }
 }

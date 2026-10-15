@@ -6,12 +6,14 @@ public class Vendedores extends Personas{
     private int codigoEmpleado;
     private LocalDate fechaContratacion;
     private double salario;
+    private Sucursal sucursal;
 
-    public Vendedores(int documento, String nombre, String correo, int telefono, int codigoEmpleado, LocalDate fechaContratacion, double salario) {
+    public Vendedores(int documento, String nombre, String correo, int telefono, int codigoEmpleado, LocalDate fechaContratacion, double salario,Sucursal sucursal) {
         super(documento, nombre, correo, telefono);
         this.codigoEmpleado = codigoEmpleado;
         this.fechaContratacion = fechaContratacion;
         this.salario = salario;
+        this.sucursal  = sucursal;
     }
 
     public int getCodigoEmpleado() {
@@ -36,5 +38,13 @@ public class Vendedores extends Personas{
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 }

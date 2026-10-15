@@ -1,21 +1,26 @@
 package uniquindio.edu.co;
 
-import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Inventario {
+    private Sucursal sucursal;
     private int registro;
-    private List<Sucursal> sucursal;
     private Talla talla;
     private String color;
     private int cantidad;
+    private Prendas prenda;
 
-    public Inventario(int registro, List<Sucursal> sucursal, Talla talla, String color, int cantidad) {
-        this.registro = registro;
+
+    public Inventario(Sucursal sucursal, int registro, Prendas prenda, Talla talla, String color, int cantidad) {
         this.sucursal = sucursal;
+        this.registro = registro;
         this.talla = talla;
         this.color = color;
         this.cantidad = cantidad;
+        this.prenda = prenda;
+
+
     }
 
     public int getRegistro() {
@@ -24,14 +29,6 @@ public class Inventario {
 
     public void setRegistro(int registro) {
         this.registro = registro;
-    }
-
-    public List<Sucursal> getSucursal() {
-        return sucursal;
-    }
-
-    public void setSucursal(List<Sucursal> sucursal) {
-        this.sucursal = sucursal;
     }
 
     public Talla getTalla() {
@@ -57,4 +54,7 @@ public class Inventario {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+
+
 }
