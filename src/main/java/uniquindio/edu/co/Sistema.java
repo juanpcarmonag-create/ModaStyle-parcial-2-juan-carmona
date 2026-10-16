@@ -92,7 +92,7 @@ public class Sistema {
                     System.out.println("Codigo de la Prenda: ");
                     int codigoPrenda1 = sc.nextInt();
                     sc.nextLine();
-                    if (empresa.verificarListaPrendas(codigoPrenda1) == false) {
+                    if (empresa.verificarListaPrendas(codigoPrenda1) == true) {
                         System.out.println("Ingrese producto del catalogo");
                         break;
                     }

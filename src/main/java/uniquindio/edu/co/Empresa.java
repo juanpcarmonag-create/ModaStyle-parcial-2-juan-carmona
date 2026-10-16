@@ -126,9 +126,9 @@ public class Empresa {
     public boolean verificarCliente(int codigo){
         boolean existe=false;
         for (Cliente cliente1 : listaClientes) {
-        if (cliente1.getCodigoAfiliacion() == codigo) {
-            existe = true;
-            break;
+            if (cliente1.getCodigoAfiliacion() == codigo) {
+                existe = true;
+                break;
 
             }
         }
@@ -136,15 +136,15 @@ public class Empresa {
     }
 
     public Cliente agregarCliente(int codigo){
-    Cliente cliente = null;
+        Cliente cliente = null;
         for(Cliente cliente1 : listaClientes) {
-        if (cliente1.getCodigoAfiliacion() == codigo) {
-            cliente=cliente1;
-            break;
+            if (cliente1.getCodigoAfiliacion() == codigo) {
+                cliente=cliente1;
+                break;
+            }
         }
-    }
         return cliente;
-}
+    }
     public String mostrarInventario(int codigoVendedor){
         String mensaje="";
         Vendedores vendedor=agregarVendedor(codigoVendedor);
@@ -237,9 +237,10 @@ public class Empresa {
         int cantidadCompras=0;
         double valor=0;
         for(Ventas venta: listaVentas){
-                valor+=venta.getValorTotal();
-                cantidadCompras++;
+            valor+=venta.getValorTotal();
+            cantidadCompras++;
         }
         return mensaje+="La empresa ha hecho "+cantidadCompras+" venta(s)"+"\nel ingreso total de la empresa es de "+valor;
+    }
 }
-}
+
