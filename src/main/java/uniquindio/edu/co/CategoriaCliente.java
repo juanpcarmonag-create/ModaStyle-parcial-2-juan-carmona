@@ -10,6 +10,7 @@ public enum CategoriaCliente {
     CategoriaCliente(double porcentaje) {
         this.porcentaje= porcentaje;
     }
+
     public double getPorcentaje() {
         return porcentaje;
     }

@@ -11,6 +11,8 @@ public class Inventario {
     private int cantidad;
     private Prendas prenda;
 
+    private CategoriaPrendas categoriaPrendas;
+
 
     public Inventario(Sucursal sucursal, int registro, Prendas prenda, Talla talla, String color, int cantidad) {
         this.sucursal = sucursal;
@@ -19,8 +21,6 @@ public class Inventario {
         this.color = color;
         this.cantidad = cantidad;
         this.prenda = prenda;
-
-
     }
 
     public int getRegistro() {
@@ -55,6 +55,32 @@ public class Inventario {
         this.cantidad = cantidad;
     }
 
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
 
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
+    }
 
+    public Prendas getPrenda() {
+        return prenda;
+    }
+
+    public void setPrenda(Prendas prenda) {
+        this.prenda = prenda;
+    }
+
+    public void CategoriaMasTalla(CategoriaPrendas categoriaPrendas,Talla talla ){
+
+    }
+
+    @Override
+    public String toString() {
+        return ", registro=" + registro +
+                ", prenda=" + prenda+
+                ", talla=" + talla +
+                ", color='" + color +
+                ", cantidad=" + cantidad;
+    }
 }

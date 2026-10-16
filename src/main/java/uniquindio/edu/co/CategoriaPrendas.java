@@ -5,7 +5,7 @@ public enum CategoriaPrendas {
     PANTALON(0),
     VESTIDO(10),
     CHAQUETA(15),
-    CALZADO(5,TallaCalzado);
+    CALZADO(5);
 
     private double porcentaje;
 

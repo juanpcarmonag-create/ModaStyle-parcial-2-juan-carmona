@@ -8,7 +8,8 @@ public class Sucursal {
     private String nombre;
     private String direccion;
     private String ciudad;
-    private List<Prendas> listaPrendas;
+    //private Vendedores vendedor;
+
 
     //private List<Inventario> inventario;
 
@@ -19,7 +20,7 @@ public class Sucursal {
         this.ciudad = ciudad;
         //this.inventario = inventario;
 
-        listaPrendas = new ArrayList<>();
+
     }
 
     public int getCodigo() {
@@ -58,26 +59,12 @@ public class Sucursal {
 
     //public void setInventario(Inventario inventario) { this.inventario = inventario;}
 
-    public boolean verificarListaPrendas(int codigo) {
-        boolean existe = false;
-        for (Prendas prenda : listaPrendas) {
-            if (prenda.getCodigoPrenda() == codigo) {
-                existe = true;
-                break;
-            }
-        }
-        return existe;
-    }
 
-    public Prendas agregarPrendaInventario(int codigo) {
-        Prendas prenda = null;
-        //if (verificarListaPrendas(codigo)==true){
-        for (Prendas prenda1 : listaPrendas) {
-            if (prenda1.getCodigoPrenda() == codigo) {
-                prenda = prenda1;
-            }
-            //}
-        }
-        return prenda;
+
+    @Override
+    public String toString() {
+        return "nombre='" + nombre +
+                ", direccion='" + direccion +
+                ", ciudad='" + ciudad;
     }
 }

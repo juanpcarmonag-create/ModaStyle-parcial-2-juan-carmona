@@ -60,10 +60,8 @@ public class Prendas {
 
     @Override
     public String toString() {
-        return "codigoPrenda=" + codigoPrenda +
-                ", nombre='" + nombre + '\'' +
-                ", marca='" + marca + '\'' +
-                ", precioUnitario=" + precioUnitario +
-                ", categoriaPrendas=" + categoriaPrendas;
+        return "nombre='" + nombre +
+                ", marca='" + marca +
+                ", precioUnitario=" + precioUnitario;
     }
 }

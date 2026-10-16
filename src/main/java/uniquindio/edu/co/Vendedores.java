@@ -47,4 +47,5 @@ public class Vendedores extends Personas{
     public void setSucursal(Sucursal sucursal) {
         this.sucursal = sucursal;
     }
+
 }
